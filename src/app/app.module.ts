@@ -18,11 +18,11 @@ import { ChartsModule } from '@progress/kendo-angular-charts';
 import 'hammerjs';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { AddEditTypeComponent } from './pages/add-edit-type/add-edit-type.component';
-import { GuageComponent } from './components/guage/guage.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
-
+import { CompiledLineChartComponent } from './components/compiled-line-chart/compiled-line-chart.component';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 
 @NgModule({
@@ -38,8 +38,8 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
     DeviceListComponent,
     DeviceDetailsComponent,
     AddEditTypeComponent,
-    GuageComponent,
-    SidenavComponent
+    SidenavComponent,
+    CompiledLineChartComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +49,8 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
     ChartsModule,
     GridModule,
     LayoutModule,
-    ButtonsModule
+    ButtonsModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

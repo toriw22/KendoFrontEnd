@@ -3,7 +3,10 @@
     margin-bottom: 0px !important;
 }
 
-.center {
-    margin-left: auto;
-    margin-right: auto;
+.k-panelbar .k-item > .k-link:hover, .k-panelbar > .k-item {
+    border-width: 0 !important;
+}
+
+.k-content, .k-panelbar {
+    border-width: 0 !important;
 }

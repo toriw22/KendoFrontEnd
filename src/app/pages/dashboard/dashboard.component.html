@@ -1,26 +1,21 @@
 
-<div class="metrics-container">
-  <div class="online metric">
-    <h4 class="no-margin center">Devices Online</h4>
-    <h5 class="no-margin center">25</h5>
+<div class="main-container dashboard-container" fxLayout="column">
+  <div class="metrics-container" fxLayout="row" fxLayoutGap="20px">
+    <div class="metric online" fxFlex fxLayoutAlign="center center">
+      <h3 class="no-margin">Devices Online:</h3>
+      <h4 class="no-margin">25</h4>
+    </div>
+    <div class="metric offline" fxFlex fxLayoutAlign="center center">
+      <h3 class="no-margin">Devices Offline:</h3>
+      <h4 class="no-margin">6</h4>
+    </div>
+    <div class="metric total" fxFlex fxLayoutAlign="center center">
+      <h3 class="no-margin">Total Devices:</h3>
+      <h4 class="no-margin">31</h4>
+    </div>
   </div>
-  <div class="offline metric">
-    <h4 class="no-margin center">Devices Offline</h4>
-    <h5 class="no-margin center">6</h5>
-  </div>
-  <div class="total metric">
-    <h4 class="no-margin center">Total Devices</h4>
-    <h5 class="no-margin center">31</h5>
-  </div>
-</div>
 
-<div class="chart-container"> 
-  <div class="chart-row" > 
-    <app-bar-chart ></app-bar-chart>
-    <app-line-chart class="col-lg-5"></app-line-chart>
-  </div>
-  <div class="chart-row"> 
-    <!-- <app-guage class="col-lg-5"></app-guage> -->
-    <app-range-area-chart class="col-5"></app-range-area-chart>
+  <div class="chart-container" fxLayout="row" fxLayoutAlign="center center"> 
+    <app-compiled-line-chart fxFlex="98%"></app-compiled-line-chart>
   </div>
 </div>

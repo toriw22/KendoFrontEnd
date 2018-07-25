@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GuageComponent } from './guage.component';
+import { CompiledLineChartComponent } from './compiled-line-chart.component';
 
-describe('GuageComponent', () => {
-  let component: GuageComponent;
-  let fixture: ComponentFixture<GuageComponent>;
+describe('CompiledLineChartComponent', () => {
+  let component: CompiledLineChartComponent;
+  let fixture: ComponentFixture<CompiledLineChartComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GuageComponent ]
+      declarations: [ CompiledLineChartComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GuageComponent);
+    fixture = TestBed.createComponent(CompiledLineChartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

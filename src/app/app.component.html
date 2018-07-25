@@ -1,3 +1,8 @@
-<h4>{{ title }}</h4>
-<app-sidenav></app-sidenav>
-<router-outlet></router-outlet>
+<div class="app-container" fxLayout="row"> 
+    <div class="sidenav-container" fxFlex="250px">
+        <app-sidenav></app-sidenav>
+    </div>
+    <div class="main-container" fxFlex>
+        <router-outlet></router-outlet>
+    </div>
+</div>

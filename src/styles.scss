@@ -16,6 +16,9 @@ body{
     }
     .main-container {
         margin: 10px;
+        .page-header {
+            margin: 15px 0px 20px;
+        }
         &.dashboard-container {
             .metrics-container {
                 margin: 20px 15px;

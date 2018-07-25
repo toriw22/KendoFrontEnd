@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@progress/kendo-theme-bootstrap/scss/panelbar";
+@import "~@progress/kendo-theme-bootstrap/scss/grid";
+@import "~@progress/kendo-theme-bootstrap/scss/button";
+
+@import "_var.scss";
+@import "_helpers.scss";
+
+body{
+    font-family: $font-family;
+    .metric {
+        display: flex;
+        height: 100px;
+        width: 30%;
+        border-radius: $border-radius;
+        align-items: center;
+        margin: 20px;
+        &.online {
+            background-color: $series-a;
+        }
+        &.offline {
+            background-color: $series-b;
+        }
+        &.total {
+            background-color: $primary;
+        }
+    }
+}

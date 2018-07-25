@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddEditDeviceComponent implements OnInit {
 
+  public genders: Array<{ text: string, value: number }> = [
+    { text: "Male", value: 1 },
+    { text: "Female", value: 2 },
+    { text: "Other", value: 3 }
+  ];
+
+  public gender: { text: string, value: number } = { text: "Female", value: 2 };
+  
   public title: string = 'Add a New Device';
 
   constructor() { }

@@ -1,4 +1,41 @@
-<p>
-  add-edit-device works!
-</p>
-<button kendoButton [look]="'outline'">Save</button>
+<div class="main-container">
+  <div class="page-header">
+    <h2>Add New Device</h2>
+  </div>
+  <form class="k-form">
+    <fieldset>
+
+      <label class="k-form-field">
+          <span>First Name</span>
+          <input class="k-textbox" placeholder="Your Name" />
+      </label>
+      <label class="k-form-field">
+          <span>Last Name</span>
+          <input class="k-textbox" value="Batista" placeholder="Your Last Name" />
+      </label>
+      <div class="k-form-field">
+          <span>Gender</span>
+
+          <input type="radio" name="gender" id="female" class="k-radio">
+          <label class="k-radio-label" for="female">Female</label>
+
+          <input type="radio" name="gender" id="male" class="k-radio" checked="checked">
+          <label class="k-radio-label" for="male">Male</label>
+      </div>
+      <label>
+          Device Type:
+          <kendo-dropdownlist
+              name="gender"
+              [data]="genders"
+              [textField]="'text'"
+              [valueField]="'value'"
+              [valuePrimitive]="true"
+          >
+          </kendo-dropdownlist>
+      </label>
+      <textarea class="k-textarea" placeholder="Description"></textarea>
+    </fieldset>
+  </form>
+  
+  <button kendoButton [look]="'outline'">Save</button>
+</div>

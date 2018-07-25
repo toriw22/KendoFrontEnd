@@ -18,3 +18,20 @@
 .k-form fieldset {
     border: none !important;
 }
+
+.k-panelbar>.k-item>.k-link.k-state-selected:not(.k-state-active), .k-panelbar>.k-item>.k-link.k-state-selected:not(.k-state-expanded) {
+    background-color: $series-c;
+}
+
+.k-panelbar>.k-item>.k-link.k-state-selected:not(.k-state-expanded):hover {
+    background-color: $series-c;
+}
+ 
+.k-panelbar > .k-item > .k-link.k-state-selected {
+    background-color: inherit;
+    border: none;
+}
+
+.k-panelbar > .k-item > .k-link.k-state-focused.k-state-selected {
+    box-shadow: none;
+}

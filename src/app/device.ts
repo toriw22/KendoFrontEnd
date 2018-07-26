@@ -1,6 +1,6 @@
 export class Device {
     id: number;
-    type: string;
+    deviceType: string;
     measures: string;
     currentReading: number;
     description: string;

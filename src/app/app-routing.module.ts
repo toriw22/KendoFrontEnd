@@ -19,9 +19,9 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   //view all devices in a table
   { path: 'devices', component: DeviceListComponent },
-  { path: 'details', component: DeviceDetailsComponent }, 
+  { path: 'details/:id', component: DeviceDetailsComponent }, 
       //view all device types in a table
-  { path: 'types', component: DeviceTypesComponent },
+  { path: 'device-types', component: DeviceTypesComponent },
       //add new or edit existing device type
         // children: [
         //   { path: '{{ :type }}', component: AddEditTypeComponent }, 

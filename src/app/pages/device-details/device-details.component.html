@@ -1,17 +1,17 @@
-<h2>Device #{{selectedDevice.id }} Details</h2>
-<div><span>id: </span>{{selectedDevice.id}}</div>
+<h2>Device #{{ device.id }} Details</h2>
+<div><span>id: </span>{{ device.id }}</div>
 <div>
   <label>type:
-    <input [(ngModel)]="selectedDevice.type" placeholder="type">
+    <input [(ngModel)]="device.deviceType" placeholder="Type">
   </label>
 </div>
 <div>
   <label>current reading:
-    <input [(ngModel)]="selectedDevice.current" placeholder="type">
+    <input [(ngModel)]="device.currentReading" placeholder="Current Reading">
   </label>
 </div>
 <div>
   <label>description:
-    <input [(ngModel)]="selectedDevice.description" placeholder="description">
+    <input [(ngModel)]="device.description" placeholder="Description">
   </label>
 </div>

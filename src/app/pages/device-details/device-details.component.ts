@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Device } from '../../device';
 
 @Component({
   selector: 'app-device-details',
@@ -15,3 +16,5 @@ export class DeviceDetailsComponent implements OnInit {
   }
 
 }
+
+@Input() device: Device;

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { products } from './products';
+import { devices } from './devices';
 
 @Component({
   selector: 'app-table',
@@ -8,7 +8,7 @@ import { products } from './products';
 })
 export class TableComponent implements OnInit {
 
-  public gridData: any[] = products;
+  public gridData: any[] = devices;
   
   constructor() { }
 

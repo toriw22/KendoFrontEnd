@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Device } from '../../device';
-import { DEVICES } from '../../devices';
+import { DevicesService } from '../../devices.service';
 
 
 @Component({
@@ -10,17 +9,25 @@ import { DEVICES } from '../../devices';
 })
 export class TableComponent implements OnInit {
   
-  public gridData: any[] = DEVICES;
 
-  devices = DEVICES;
 
-  selectedDevice: Device;
-
-  constructor() { }
+  constructor(private devicesService: DevicesService) { }
   
+  getDevices(): void {
+    this.devicesService.getDevices()
+        .subscribe(devices => this.devices = devices);
+  }
+
   ngOnInit() {
+    this.getDevices();
     console.log(DEVICES);
   }
+
+  public gridData: any[] = devices;
+
+  devices: Device[];
+
+  selectedDevice: Device;
 
   onSelect(device: Device): void {
     this.selectedDevice = device;

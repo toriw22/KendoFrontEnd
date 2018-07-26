@@ -24,7 +24,7 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { FormsModule } from '@angular/forms';
 import { CompiledLineChartComponent } from './components/compiled-line-chart/compiled-line-chart.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
-// import { DevicesService } from "./devices.service";
+import { DevicesService } from "./devices.service";
 import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
@@ -56,8 +56,8 @@ import { HttpClientModule } from "@angular/common/http";
     FlexLayoutModule,
     HttpClientModule
   ],
-  // DevicesService
-  providers: [],
+  
+  providers: [DevicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

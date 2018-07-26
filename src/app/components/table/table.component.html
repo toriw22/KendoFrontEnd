@@ -1,10 +1,13 @@
-<kendo-grid [data]="gridData">
-  <kendo-grid-column field="id" title="ID" width="40">
+<kendo-grid [data]="gridData" [height]="584">
+  <kendo-grid-column field="id" title="ID" width="40" (click)="onSelect(device)">
   </kendo-grid-column>
-  <kendo-grid-column field="type" title="Type" width="40">
+  <kendo-grid-column field="type" title="Type" width="40" (click)="onSelect(device)">
   </kendo-grid-column>
-  <kendo-grid-column field="description" title="Description"  width="250">
+  <kendo-grid-column field="description" title="Description"  width="250" (click)="onSelect(device)">
   </kendo-grid-column>
-  <kendo-grid-column field="status" title="Active" width="80">
-  </kendo-grid-column>
+  <kendo-grid-column field="status" title="Active" width="80" (click)="onSelect(device)">
+    <ng-template kendoGridCellTemplate let-dataItem>
+        <input type="checkbox" [checked]="dataItem.status" disabled/>
+    </ng-template>
+</kendo-grid-column>
 </kendo-grid>

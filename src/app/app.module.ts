@@ -21,9 +21,11 @@ import { AddEditTypeComponent } from './pages/add-edit-type/add-edit-type.compon
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { LayoutModule } from '@progress/kendo-angular-layout';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
+import { FormsModule } from '@angular/forms';
 import { CompiledLineChartComponent } from './components/compiled-line-chart/compiled-line-chart.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
-
+// import { DevicesService } from "./devices.service";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -50,8 +52,11 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     GridModule,
     LayoutModule,
     ButtonsModule,
-    FlexLayoutModule
+    FormsModule,    
+    FlexLayoutModule,
+    HttpClientModule
   ],
+  // DevicesService
   providers: [],
   bootstrap: [AppComponent]
 })

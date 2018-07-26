@@ -1,3 +1,17 @@
-<p>
-  device-details works!
-</p>
+<h2>Device #{{selectedDevice.id }} Details</h2>
+<div><span>id: </span>{{selectedDevice.id}}</div>
+<div>
+  <label>type:
+    <input [(ngModel)]="selectedDevice.type" placeholder="type">
+  </label>
+</div>
+<div>
+  <label>current reading:
+    <input [(ngModel)]="selectedDevice.current" placeholder="type">
+  </label>
+</div>
+<div>
+  <label>description:
+    <input [(ngModel)]="selectedDevice.description" placeholder="description">
+  </label>
+</div>

@@ -1,5 +1,7 @@
-export const DEVICES = [
-    [{"id":1,"type":"A","measures":"humidity","currentReading":79,"description":"congue etiam justo etiam pretium iaculis justo in hac habitasse","status":true},
+import { Device } from './device';
+
+export const DEVICES: Device[] = [
+    {"id":1,"type":"A","measures":"humidity","currentReading":79,"description":"congue etiam justo etiam pretium iaculis justo in hac habitasse","status":true},
     {"id":2,"type":"A","measures":"humidity","currentReading":38,"description":"velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit","status":true},
     {"id":3,"type":"A","measures":"humidity","currentReading":54,"description":"tellus nulla ut erat id","status":true},
     {"id":4,"type":"A","measures":"humidity","currentReading":54,"description":"est donec odio justo sollicitudin ut suscipit a","status":true},
@@ -43,6 +45,6 @@ export const DEVICES = [
     {"id":42,"type":"C","measures":"temperature","currentReading":129,"description":"duis aliquam convallis nunc proin at turpis a pede","status":true},
     {"id":43,"type":"C","measures":"temperature","currentReading":187,"description":"ultrices enim lorem ipsum dolor sit","status":true},
     {"id":44,"type":"C","measures":"temperature","currentReading":67,"description":"orci luctus et ultrices posuere cubilia","status":true},
-    {"id":45,"type":"C","measures":"temperature","currentReading":154,"description":"pulvinar nulla pede ullamcorper augue a suscipit","status":true}]
+    {"id":45,"type":"C","measures":"temperature","currentReading":154,"description":"pulvinar nulla pede ullamcorper augue a suscipit","status":true}
 
 ]

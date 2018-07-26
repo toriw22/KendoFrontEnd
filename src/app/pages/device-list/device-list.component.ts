@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// import { products } from './products';
+// import { DEVICES } from '../../devices';
 
 @Component({
   selector: 'app-device-list',
@@ -7,11 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeviceListComponent implements OnInit {
 
-  public title: string = 'Devices';
-
-  constructor() { }
+  // public gridData: any[] = products;
 
   ngOnInit() {
+    // console.log(products);
+    // console.log(products[1].ProductID);
   }
 
 }

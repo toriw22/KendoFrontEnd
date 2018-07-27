@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DevicesService } from '../../devices.service';
-
+import { Device } from '../../device';
 
 @Component({
   selector: 'app-table',
@@ -9,6 +9,10 @@ import { DevicesService } from '../../devices.service';
 })
 export class TableComponent implements OnInit {
   
+  devices: Device[];
+  
+  selectedDevice: Device;
+
 
 
   constructor(private devicesService: DevicesService) { }
@@ -20,14 +24,12 @@ export class TableComponent implements OnInit {
 
   ngOnInit() {
     this.getDevices();
-    console.log(DEVICES);
+    console.log(this.devices);
+    
   }
 
-  public gridData: any[] = devices;
-
-  devices: Device[];
-
-  selectedDevice: Device;
+  
+  public gridData: any[] = this.devices;
 
   onSelect(device: Device): void {
     this.selectedDevice = device;

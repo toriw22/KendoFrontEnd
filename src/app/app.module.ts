@@ -26,6 +26,8 @@ import { CompiledLineChartComponent } from './components/compiled-line-chart/com
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { DevicesService } from "./devices.service";
 import { HttpClientModule } from "@angular/common/http";
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,10 @@ import { HttpClientModule } from "@angular/common/http";
     ButtonsModule,
     FormsModule,    
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
   
   providers: [DevicesService],

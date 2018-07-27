@@ -25,11 +25,29 @@ import { FormsModule } from '@angular/forms';
 import { CompiledLineChartComponent } from './components/compiled-line-chart/compiled-line-chart.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { DevicesService } from "./devices.service";
+import { HttpModule } from '@angular/http';
 import { HttpClientModule } from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    DropDownsModule,
+    BrowserAnimationsModule,
+    ChartsModule,
+    GridModule,
+    LayoutModule,
+    ButtonsModule,
+    FormsModule,    
+    FlexLayoutModule,
+    HttpModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
+  ],
   declarations: [
     AppComponent,
     DashboardComponent,
@@ -45,22 +63,6 @@ import { InMemoryDataService }  from './in-memory-data.service';
     SidenavComponent,
     CompiledLineChartComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    DropDownsModule,
-    BrowserAnimationsModule,
-    ChartsModule,
-    GridModule,
-    LayoutModule,
-    ButtonsModule,
-    FormsModule,    
-    FlexLayoutModule,
-    HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService)
-  ],
-  
-  providers: [DevicesService],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ] 
 })
 export class AppModule { }

@@ -11,34 +11,20 @@ export class TableComponent implements OnInit {
   
   devices: Device[];
   
-  selectedDevice: Device;
-
-
-
   constructor(private devicesService: DevicesService) { }
-  
+ 
+  ngOnInit() {
+    this.getDevices();
+    console.log(Device);
+    console.log(this.devices);
+  }
+   
   getDevices(): void {
     this.devicesService.getDevices()
         .subscribe(devices => this.devices = devices);
   }
 
-  ngOnInit() {
-    this.getDevices();
-    console.log(this.devices);
-    
-  }
-
-  
   public gridData: any[] = this.devices;
-
-  onSelect(device: Device): void {
-    this.selectedDevice = device;
-    console.log(device);
-  }
-
-  onClickTest() {
-    console.log('click test worked!');
-  }
 
   
 }

@@ -57,9 +57,7 @@ import { InMemoryDataService }  from './in-memory-data.service';
     FormsModule,    
     FlexLayoutModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    )
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
   
   providers: [DevicesService],

@@ -10,7 +10,7 @@ import { tap } from 'rxjs/operators/tap';
 export abstract class NorthwindService extends BehaviorSubject<GridDataResult> {
     public loading: boolean;
 
-    private BASE_URL = 'http://localhost:4200/api/';
+    private BASE_URL = 'https://localhost:4200/api/';
 
     constructor(
         private http: HttpClient,
@@ -32,7 +32,7 @@ export abstract class NorthwindService extends BehaviorSubject<GridDataResult> {
             .get(`${this.BASE_URL}${tableName}`)
             .pipe(
                 map(response => (<GridDataResult>{
-                    data: response['devices'],
+                    data: response['value'],
                     total: parseInt(response['@odata.count'], 10)
                 })),
                 tap(() => this.loading = false)
@@ -105,19 +105,6 @@ export class DevicesService extends NorthwindService {
 //     }
 // }
 
-
-// @Injectable()
-// export class TypesService extends NorthwindService {
-//     constructor(http: HttpClient) { super(http, 'Categories'); }
-
-//     queryAll(st?: any): Observable<GridDataResult> {
-//         const state = Object.assign({}, st);
-//         delete state.skip;
-//         delete state.take;
-
-//         return this.fetch(this.tableName, state);
-//     }
-// }
 
 
 //============== tour of heroes ==============//

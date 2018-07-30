@@ -9,23 +9,11 @@ import { DeviceDetailsComponent } from './pages/device-details/device-details.co
 
 const routes: Routes = [
 
-  //add new device
-  { path: 'add-edit', component: AddEditDeviceComponent, 
-  //edit existing device
-    // children: [
-    //   { path: ':id', component: AddEditDeviceComponent }, 
-    // ]
-  },
+  { path: 'add-edit', component: AddEditDeviceComponent },
   { path: 'dashboard', component: DashboardComponent },
-  //view all devices in a table
   { path: 'devices', component: DeviceListComponent },
   { path: 'details/:id', component: DeviceDetailsComponent }, 
-      //view all device types in a table
   { path: 'device-types', component: DeviceTypesComponent },
-      //add new or edit existing device type
-        // children: [
-        //   { path: '{{ :type }}', component: AddEditTypeComponent }, 
-        // ]
   { path: '',   redirectTo: '/dashboard', pathMatch: 'full' },
 ];
 

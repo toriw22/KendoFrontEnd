@@ -1,4 +1,14 @@
-<kendo-grid [data]="gridData" [height]="584">
+<ul class="devices">
+    <li *ngFor="let device of devices">
+      <a routerLink="/details/{{device.id}}">
+        <span class="badge">{{device.id}}</span> {{device.name}}
+      </a>
+      <span class="badge">{{device.deviceType}}</span>
+      <span class="badge">{{device.description}}</span>
+    </li>
+  </ul>
+
+<kendo-grid devicesBinding [height]="584">
     <kendo-grid-column field="id" title="ID" width="40" (click)="onSelect(dataItem)"  >
     </kendo-grid-column>
     <kendo-grid-column field="deviceType" title="Type" width="40" (click)="onSelect(device)" >

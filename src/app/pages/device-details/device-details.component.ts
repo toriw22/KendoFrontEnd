@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { DevicesService } from '../../devices.service';
 import { Device } from '../../device';
 
 @Component({
@@ -7,13 +8,20 @@ import { Device } from '../../device';
   styleUrls: ['./device-details.component.scss']
 })
 export class DeviceDetailsComponent implements OnInit {
-
-  public title: string = 'Device A';
-
+devices: Device[];
+  
   constructor() { }
-
+  // private devicesService: DevicesService
+ 
   ngOnInit() {
+    // this.getDevices();
   }
+   
+  // getDevices(): void {
+  //   this.devicesService.getDevices()
+  //   .subscribe(devices => this.devices = devices);
+  // }
+  
 
 }
 

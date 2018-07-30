@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DevicesService } from '../../devices.service';
-
+import { Device } from '../../device';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,21 +9,19 @@ import { DevicesService } from '../../devices.service';
 })
 export class DashboardComponent implements OnInit {
   
-  // devices: DEVICES[];
+  devices: Device[];
 
-  // constructor(private devicesService: DevicesService) { }
+  constructor() { }
+  // private devicesService: DevicesService
 
   // getDevices(): void {
   //   this.devicesService.getDevices()
   //       .subscribe(devices => this.devices = devices);
   // }
 
-  // ngOnInit() {
-  //   this.getDevices();
-  // }
+  ngOnInit() {
+    // this.getDevices();
+  }
   
-  constructor () {}
-
-  ngOnInit () {}
 
 }

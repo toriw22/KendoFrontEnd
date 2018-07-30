@@ -1,30 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-import { DevicesService } from '../../devices.service';
-import { Device } from '../../device';
+import { Component, OnInit, Directive } from '@angular/core';
 
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss']
 })
+
+
 export class TableComponent implements OnInit {
   
-  devices: Device[];
+  // devices: Device[];
   
-  constructor(private devicesService: DevicesService) { }
+  // constructor(private devicesService: DevicesService) { }
  
   ngOnInit() {
-    this.getDevices();
-    console.log(Device);
-    console.log(this.devices);
+    // this.getDevices();
   }
    
-  getDevices(): void {
-    this.devicesService.getDevices()
-        .subscribe(devices => this.devices = devices);
-  }
-
-  public gridData: any[] = this.devices;
+  // getDevices(): void {
+  //   this.devicesService.getDevices()
+  //   .subscribe(devices => this.devices = devices);
+  // }
+  
+  
+  // public gridData: any[] = this.devices;
 
   
 }

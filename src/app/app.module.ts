@@ -29,6 +29,7 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
+import { DevicesBindingDirective } from './remote-binding.directive';
 
 @NgModule({
   imports: [
@@ -61,8 +62,10 @@ import { InMemoryDataService }  from './in-memory-data.service';
     DeviceDetailsComponent,
     AddEditTypeComponent,
     SidenavComponent,
-    CompiledLineChartComponent
+    CompiledLineChartComponent,
+    DevicesBindingDirective
   ],
+  providers: [ DevicesService ],
   bootstrap: [ AppComponent ] 
 })
 export class AppModule { }

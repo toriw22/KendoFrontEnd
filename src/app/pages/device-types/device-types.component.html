@@ -10,14 +10,14 @@
   <kendo-tabstrip >
     <kendo-tabstrip-tab
       *ngFor="let item of items let i=index"
-      [title]="item.city"
+      [title]="item.type"
       [selected]="i == selected"
       [disabled]="item.disabled"
     >
         <ng-template kendoTabContent>
           <div class="weather">
-            <h4>{{item.temp}}<span>&ordm;C</span></h4>
-            <p>Weather in {{item.city}} is {{item.weather}}.</p>
+            <h4>This device measures {{ item.measures }}.</h4>
+            <p>The average {{ item.measures | lowercase }} of type {{ item.type }} devices is {{ item.averageReading }}.</p>
           </div>
         </ng-template>
     </kendo-tabstrip-tab>

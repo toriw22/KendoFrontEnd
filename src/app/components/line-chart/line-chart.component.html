@@ -1,11 +1,7 @@
 <kendo-chart>
-  <kendo-chart-category-axis>
-      <kendo-chart-category-axis-item
-          [categories]="['Jan', 'Feb', 'Mar', 'Apr']">
-      </kendo-chart-category-axis-item>
-  </kendo-chart-category-axis>
+  <kendo-chart-area background="#fff" [margin]="30"></kendo-chart-area>
   <kendo-chart-series>
-    <kendo-chart-series-item type="verticalLine" [data]="[ 1, 2, 3, 5 ]">
+    <kendo-chart-series-item type="line" [data]="devices" field="pump_status.pump_temperature_c" categoryField="epochtime" color="#ffd246">
     </kendo-chart-series-item>
   </kendo-chart-series>
 </kendo-chart>

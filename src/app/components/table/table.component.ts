@@ -22,7 +22,10 @@ export class TableComponent implements OnInit {
    
   getDevices(): void {
     this.devicesService.getDevices()
-    .subscribe(devices => this.devices = devices);
+    .subscribe(devices => {
+      this.devices = devices;
+      console.log(devices.length);
+    });
   }
 
   // warning: number = device.pump_status.warnings;

@@ -5,35 +5,22 @@
   <form class="k-form">
     <fieldset>
 
-      <label class="k-form-field">
-          <span>First Name</span>
-          <input class="k-textbox" placeholder="Your Name" />
-      </label>
-      <label class="k-form-field">
-          <span>Last Name</span>
-          <input class="k-textbox" value="Batista" placeholder="Your Last Name" />
-      </label>
-      <div class="k-form-field">
-          <span>Status</span>
-
-          <input type="radio" name="status" id="true" class="k-radio" checked="checked">
-          <label class="k-radio-label" for="true">Active</label>
-
-          <input type="radio" name="status" id="false" class="k-radio" >
-          <label class="k-radio-label" for="false">Inactive</label>
-      </div>
-      <label>
-          Device Type:
-          <kendo-dropdownlist
-              name="gender"
-              [data]="genders"
-              [textField]="'text'"
-              [valueField]="'value'"
-              [valuePrimitive]="true"
-          >
-          </kendo-dropdownlist>
-      </label>
-      <textarea class="k-textarea" placeholder="Description"></textarea>
+        <label class="k-form-field">
+            <span>VIN</span>
+            <input class="k-textbox"/>
+        </label>
+        <label class="k-form-field">
+            <span>ECM</span>
+            <input class="k-textbox"/>
+        </label>
+        <label class="k-form-field">
+            <span>ESM</span>
+            <input class="k-textbox"/>
+        </label>
+        <label class="k-form-field">
+            <span>Cost ID</span>
+            <input class="k-textbox"/>
+        </label>
     </fieldset>
   </form>
   

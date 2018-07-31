@@ -9,17 +9,11 @@ import { Device } from '../../device';
 })
 export class DashboardComponent implements OnInit {
   
-  devices: Device[];
 
   constructor() { }
-  private devicesService: DevicesService
 
   getDevices(): void {
-    this.devicesService.getDevices()
-      .subscribe(devices => this.devices = devices);
   }
 
-  ngOnInit() {
-    this.getDevices();
-  }
+  ngOnInit() {}
 }

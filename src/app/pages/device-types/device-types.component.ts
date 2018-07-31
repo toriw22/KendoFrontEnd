@@ -9,25 +9,20 @@ export class DeviceTypesComponent implements OnInit {
 
   public selected: number = 1;
   public items: any = [{
-        disabled: true,
-        city: "Paris",
-        temp: 17,
-        weather: "rainy"
+        disabled: false,
+        type: "A",
+        averageReading: 29,
+        measures: "Temperature"
   }, {
         disabled: false,
-        city: "New York",
-        temp: 29,
-        weather: "sunny"
+        type: "B",
+        averageReading: 24,
+        measures: "Humidity"
   }, {
         disabled: false,
-        city: "Sofia",
-        temp: 23,
-        weather: "cloudy"
-  }, {
-        disabled: false,
-        city: "London",
-        temp: 19,
-        weather: "cloudy"
+        type: "C",
+        averageReading: 124132,
+        measures: "Location"
   }]
   
   constructor() { }

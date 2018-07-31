@@ -29,7 +29,8 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from "@angular/common/http";
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
-import { DevicesBindingDirective } from './remote-binding.directive';
+import { UploadModule } from '@progress/kendo-angular-upload';
+
 
 @NgModule({
   imports: [
@@ -47,7 +48,8 @@ import { DevicesBindingDirective } from './remote-binding.directive';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+    UploadModule
   ],
   declarations: [
     AppComponent,
@@ -62,8 +64,7 @@ import { DevicesBindingDirective } from './remote-binding.directive';
     DeviceDetailsComponent,
     AddEditTypeComponent,
     SidenavComponent,
-    CompiledLineChartComponent,
-    DevicesBindingDirective
+    CompiledLineChartComponent
   ],
   providers: [ DevicesService ],
   bootstrap: [ AppComponent ] 

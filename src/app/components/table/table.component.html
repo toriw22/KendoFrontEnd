@@ -1,27 +1,21 @@
-<ul class="devices">
-    <li *ngFor="let device of devices">
-      <a routerLink="/details/{{device.id}}">
-        <span class="badge">{{device.id}}</span> {{device.name}}
-      </a>
-      <span class="badge">{{device.deviceType}}</span>
-      <span class="badge">{{device.description}}</span>
-    </li>
-  </ul>
 
-<kendo-grid devicesBinding [height]="584">
-    <kendo-grid-column field="id" title="ID" width="40" (click)="onSelect(dataItem)"  >
+<kendo-grid [data]="devices" [height]="584">
+    <kendo-grid-column field="id" title="ID" width="40">
+        <a routerLink="/details/device.id"></a>
     </kendo-grid-column>
-    <kendo-grid-column field="deviceType" title="Type" width="40" (click)="onSelect(device)" >
+    <kendo-grid-column field="deviceType" title="Type" width="40">
     </kendo-grid-column>
-    <kendo-grid-column field="description" title="Description"  width="250" (click)="onSelect(Device)" > 
+    <kendo-grid-column field="description" title="Description"  width="250"> 
     </kendo-grid-column>
-    <kendo-grid-column field="status" title="Active" width="80" (click)="onClickTest()" >
+    <kendo-grid-column field="status" title="Active" width="80">
         <ng-template kendoGridCellTemplate let-dataItem>
             <input type="checkbox" [checked]="dataItem.status" disabled/>
         </ng-template>
     </kendo-grid-column>
-    <kendo-grid-column  width="80" *ngIf="selectedDevice">
-        <button kendoButton [look]="'outline'" routerLink="/details/dataItem.id">View Details</button>
+    <kendo-grid-column  width="80">
+        <ng-template kendoGridCellTemplate let-dataItem>
+            <button kendoButton [look]="'outline'" routerLink="/details/{{dataItem.id}}">View Details</button>
+        </ng-template>
     </kendo-grid-column>
 </kendo-grid>
 

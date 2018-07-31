@@ -12,16 +12,14 @@ export class DashboardComponent implements OnInit {
   devices: Device[];
 
   constructor() { }
-  // private devicesService: DevicesService
+  private devicesService: DevicesService
 
-  // getDevices(): void {
-  //   this.devicesService.getDevices()
-  //       .subscribe(devices => this.devices = devices);
-  // }
+  getDevices(): void {
+    this.devicesService.getDevices()
+      .subscribe(devices => this.devices = devices);
+  }
 
   ngOnInit() {
-    // this.getDevices();
+    this.getDevices();
   }
-  
-
 }

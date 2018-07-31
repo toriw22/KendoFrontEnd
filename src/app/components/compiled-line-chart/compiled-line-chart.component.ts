@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DevicesService } from '../../devices.service';
+import { Device } from '../../device';
 
 @Component({
   selector: 'app-compiled-line-chart',
@@ -20,11 +22,21 @@ export class CompiledLineChartComponent implements OnInit {
     name: "World",
     data: [1.988, 2.733, 3.994, 3.464, 4.001, 3.939, 1.333, -2.245, 4.339, 2.727]
   }];
-  public categories: number[] = [2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011];
+  public reading: number[] = [0, 50, 100, 150, 200, 250, 300];
   
-  constructor() { }
 
+  devices: Device[];
+  
+  constructor(private devicesService: DevicesService) { }
+ 
   ngOnInit() {
+    this.getDevices();
   }
+   
+  getDevices(): void {
+    this.devicesService.getDevices()
+    .subscribe(devices => this.devices = devices);
+  }
+  
 
 }

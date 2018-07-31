@@ -1,8 +1,8 @@
 <h2>Device #{{ device.id }} Details</h2>
 <div><span>id: </span>{{ device.id }}</div>
 <div>
-  <label>type:
-    <input [(ngModel)]="device.deviceType" placeholder="Type">
+  <label>type: 
+    <input [(ngModel)]="device.id" placeholder="ID">
   </label>
 </div>
 <div>
@@ -11,7 +11,8 @@
   </label>
 </div>
 <div>
-  <label>description:
-    <input [(ngModel)]="device.description" placeholder="Description">
+  <label>Warnings:
+    <input [(ngModel)]="pump_status.warnings" placeholder="Warnings">
   </label>
 </div>
+

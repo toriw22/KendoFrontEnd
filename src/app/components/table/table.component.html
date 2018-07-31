@@ -1,16 +1,13 @@
 
 <kendo-grid [data]="devices" [height]="584">
-    <kendo-grid-column field="id" title="ID" width="40">
-        <a routerLink="/details/device.id"></a>
+    <kendo-grid-column field="id" title="ID" width="100">
+        <a routerLink="/dashboard"></a>
     </kendo-grid-column>
-    <kendo-grid-column field="deviceType" title="Type" width="40">
+    <kendo-grid-column field="epochtime" title="Time" width="100">
     </kendo-grid-column>
-    <kendo-grid-column field="description" title="Description"  width="250"> 
+    <kendo-grid-column field="pump_status.pump_temperature_c" title="Temperature"  width="100"> 
     </kendo-grid-column>
-    <kendo-grid-column field="status" title="Active" width="80">
-        <ng-template kendoGridCellTemplate let-dataItem>
-            <input type="checkbox" [checked]="dataItem.status" disabled/>
-        </ng-template>
+    <kendo-grid-column field="pump_status.warnings" title="Warnings" width="150">
     </kendo-grid-column>
     <kendo-grid-column  width="80">
         <ng-template kendoGridCellTemplate let-dataItem>
@@ -19,4 +16,3 @@
     </kendo-grid-column>
 </kendo-grid>
 
-<!-- routerLink="/details/{{device.id}}" -->

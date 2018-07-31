@@ -8,20 +8,19 @@ import { Device } from '../../device';
   styleUrls: ['./device-details.component.scss']
 })
 export class DeviceDetailsComponent implements OnInit {
-devices: Device[];
+  devices: Device[];
   
-  constructor() { }
-  // private devicesService: DevicesService
+  constructor(private devicesService: DevicesService) { }
  
   ngOnInit() {
-    // this.getDevices();
+    this.getDevices();
   }
    
-  // getDevices(): void {
-  //   this.devicesService.getDevices()
-  //   .subscribe(devices => this.devices = devices);
-  // }
-  
+  getDevices(): void {
+    this.devicesService.getDevices()
+    .subscribe(devices => this.devices = devices);
+  }
+
 
 }
 

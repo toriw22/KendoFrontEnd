@@ -24,11 +24,11 @@ export class DevicesService {
     return this.http.get<Device[]>(this.devicesUrl)
       .pipe(
         tap(devices => console.log('fetched devices')),
-        catchError(this.handleError('getDevices', []))
+        catchError(this.handleError('getDevices failed', []))
       );
   }
 
-  getDevice(id: number): Observable<Device> {
+  getDevice(id: string): Observable<Device> {
     const url = `${this.devicesUrl}/${id}`;
     return this.http.get<Device>(url).pipe(
       tap(_ => console.log(`fetched device id=${id}`)),

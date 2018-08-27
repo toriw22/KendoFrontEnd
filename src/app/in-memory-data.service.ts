@@ -5,7 +5,7 @@ export class InMemoryDataService implements InMemoryDbService {
         const devices = [  
         {
             "pump_status": {
-                "warnings": "0000000000000000000000000",
+                "warnings": "100000000000000000000000",
                 "s3": 197,
                 "s2": 131,
                 "motor_current_ma": 4900,

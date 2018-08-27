@@ -1,9 +1,9 @@
 <h2>Device #{{ device.id }} Details</h2>
 <div><span>id: </span>{{ device.id }}</div>
 <div>
-  <label>type: 
-    <input [(ngModel)]="device.id" placeholder="ID">
-  </label>
+  <label>type: </label>
+    <div [(ngModel)]="device.id">{{device.id}}</div>
+
 </div>
 <div>
   <label>current reading:

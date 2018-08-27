@@ -25,13 +25,15 @@ export class TableComponent implements OnInit {
     .subscribe(devices => {
       this.devices = devices;
       console.log(devices.length);
+  
+      for (var i = 0; i < devices.length; i++ ) {
+        var d = new Date(0); 
+        if (this.devices[i].pump_status.warnings != "0000000000000000000000000" ) {
+          alert("Warning at " + new Date(devices[i].epochtime * 1000));
+        }
+      }
     });
   }
-
-  // warning: number = device.pump_status.warnings;
-
-  // if (warning !=== 0000000000000000000000000) {
-
   
   
 }
